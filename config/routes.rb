@@ -1,4 +1,10 @@
 Crm::Application.routes.draw do
+  match 'default', to: 'static_pages#default'
+
+  root to: 'static_pages#default'
+
+  resources :sign_ins, only: [:new, :create, :destroy]
+
   resources :users
 
   # The priority is based upon order of creation:
