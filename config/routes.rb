@@ -3,9 +3,12 @@ Crm::Application.routes.draw do
 
   root to: 'static_pages#default'
 
-  resources :sign_ins, only: [:new, :create, :destroy]
+  resources :sign_ins, only: [ :new, :create, :destroy ]
 
   resources :users
+
+  match '/signin', to: 'sign_ins#new'
+  match '/signout', to: 'sign_ins#destroy'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

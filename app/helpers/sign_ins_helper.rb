@@ -1,5 +1,5 @@
 module SignInsHelper
-	def is_loggedin?
-		
+	def logged_in?
+		!session[:user_id].nil?
 	end 
 end
