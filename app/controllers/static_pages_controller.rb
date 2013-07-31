@@ -1,4 +1,5 @@
 include SignInsHelper
+
 class StaticPagesController < ApplicationController
 
   	def default

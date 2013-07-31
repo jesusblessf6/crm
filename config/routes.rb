@@ -9,6 +9,7 @@ Crm::Application.routes.draw do
 
   match '/signin', to: 'sign_ins#new'
   match '/signout', to: 'sign_ins#destroy'
+  match '/signup', to: 'users#new'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

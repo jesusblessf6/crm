@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 
   		if(@user.save) then
   			session[:user_id] = @user.id
-  			redirect_to users_path
+  			redirect_to root_path
   		end 
   	end
 
